@@ -1,0 +1,77 @@
+{
+  "title": "Echo Desk",
+  "views": [
+    {
+      "title": "Desk",
+      "path": "desk",
+      "type": "sections",
+      "max_columns": 2,
+      "sections": [
+        {
+          "type": "grid",
+          "cards": [
+            {
+              "type": "clock",
+              "clock_style": "digital",
+              "clock_size": "medium",
+              "time_format": "24",
+              "show_seconds": false,
+              "time_zone": "UTC"
+            },
+            {
+              "type": "weather-forecast",
+              "entity": "weather.home",
+              "show_current": true,
+              "show_forecast": false
+            },
+            {
+              "type": "tile",
+              "entity": "climate.room",
+              "name": "Thermostat",
+              "features": [
+                {
+                  "type": "target-temperature"
+                }
+              ]
+            },
+            {
+              "type": "tile",
+              "entity": "camera.front_door",
+              "name": "Doorbell",
+              "tap_action": {
+                "action": "more-info"
+              }
+            },
+            {
+              "type": "markdown",
+              "title": "Status",
+              "content": "{% set door = states('binary_sensor.front_door') %}{{ 'Door open' if door == 'on' else 'All clear' if door == 'off' else 'Door status unavailable' }}\n\n{% set battery = states('sensor.remote_battery') %}{{ 'Battery: ' ~ battery ~ '%' if is_number(battery) else 'Battery status unavailable' }}"
+            },
+            {
+              "type": "tile",
+              "entity": "light.desk",
+              "name": "Desk",
+              "tap_action": {
+                "action": "toggle"
+              },
+              "icon_tap_action": {
+                "action": "toggle"
+              }
+            },
+            {
+              "type": "tile",
+              "entity": "light.room",
+              "name": "Room",
+              "tap_action": {
+                "action": "toggle"
+              },
+              "icon_tap_action": {
+                "action": "toggle"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"timezone":"UTC","weather":"weather.home","climate":"climate.room","doorbell":"camera.front_door","door":"binary_sensor.front_door","battery":"sensor.remote_battery","lights":[{"name":"Desk","entity":"light.desk"},{"name":"Room","entity":"light.room"}]}
