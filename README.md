@@ -40,3 +40,7 @@ No HACS cards, cloud service, firmware image, local hostname, photos or account 
 - [Tile card](https://www.home-assistant.io/dashboards/tile/)
 
 Original generator and examples by Terry (Romme) Felton, developed with AI assistance. MIT licensed.
+
+## How this started
+
+[Read the project history](docs/PROJECT_HISTORY.md) for the original problem, the choices behind the first release and the checks that still need hands-on verification.
